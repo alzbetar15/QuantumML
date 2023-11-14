@@ -1,0 +1,205 @@
+Loss History for QCNN circuits, U_6 Amplitude with cross entropy trained with: 10000 with snr: 0.4
+[18.585087092923107, 15.89649870803823, 16.44164720853705, 14.226772558212584, 15.106925955472583, 17.411019235937186, 16.406679472595552, 15.258244589326585, 15.064869185605026, 14.968132148329179, 13.36023338693289, 14.594535248915793, 14.737421101824838, 14.006292236419132, 12.388631119488139, 12.769742245117259, 12.288459947035337, 12.006405586473523, 13.570895965825763, 10.724072934071339, 13.65069647584959, 13.90940198295427, 15.649068040339314, 14.831267405735593, 12.744810555393467, 11.247057451507837, 13.511144918361166, 13.695564367832484, 11.979175337985838, 9.611657994823169, 12.030797697322123, 13.375358180577056, 13.21017338740621, 10.86446352530998, 11.53988063634674, 12.25129765892763, 12.541034710901782, 12.001831481471614, 10.343970131329197, 11.937742595744284, 11.290215077477265, 11.364049655620446, 9.060879144398966, 11.071956810908715, 8.882427098229892, 11.381212883497607, 9.415069976467079, 10.302471668912363, 14.70684775927746, 12.853872778011723, 8.387755144086242, 12.184333318600096, 11.682767221601392, 10.62137029486386, 10.702827702315291, 11.787100608479788, 9.195697818614446, 9.740082158499229, 12.545501029036041, 11.00490730413232, 10.513363713924184, 9.264977944798968, 9.43731338937392, 9.535509246791179, 9.667133189297735, 10.2079444264414, 10.923390369275532, 9.037230117092019, 10.219287604196941, 11.135809367249216, 10.615014546066424, 8.891422487422087, 12.00365953995055, 8.178696622533943, 11.454063452003318, 11.92667246007962, 13.120794171381846, 12.508327707275434, 11.410011967731556, 9.267452099660954, 11.448754448935652, 8.3307840620654, 10.563148769025707, 9.763854012791436, 10.453730766042213, 9.26807607702624, 11.110124666302946, 12.510426259939063, 12.987716412038289, 9.772419307009653, 11.492124149552026, 9.505045783238137, 11.15003833474855, 8.667275604019242, 10.365195752605517, 11.01888966535828, 8.562328467526553, 12.52381188596376, 9.552034391688256, 9.514116343768535, 10.212828255317705, 8.92216165198396, 8.773989355875788, 12.610887261830538, 8.764465226534147, 11.158760345244382, 10.163122261840677, 10.28359476432022, 8.570663991069404, 8.459015779358822, 12.818210249468297, 9.201420854941553, 11.020648706095622, 11.38305127119209, 9.752182280114187, 8.315589181521675, 10.998550647520396, 8.526285028912055, 11.110960553040307, 9.29873036500473, 10.811062539613458, 8.655128101634801, 9.112858569289143, 8.710172998748822, 11.113563550681897, 8.442999350501315, 14.505013765477598, 12.03034676474898, 10.17146926168553, 10.89276756167573, 9.013337345342578, 8.822876848639407, 11.737451447524906, 7.517250987723887, 6.886630053601623, 9.838845076959222, 13.95875535614633, 10.683236110185376, 8.753759502227188, 10.24789221992449, 9.180030837045441, 9.93923410247525, 9.38488557279492, 11.40938083790514, 7.832933254276525, 9.798829542366576, 9.448375089680791, 9.66930292006103, 13.467134106005743, 8.930471718226947, 8.442526214017901, 13.06006497609061, 11.87027502816792, 9.024208012938503, 10.615092757425284, 12.530827569075566, 10.457315711913063, 11.733740801930312, 10.155044900328663, 9.446909077898654, 8.528873905746424, 11.001172137915912, 7.9747442759287, 10.4367315338367, 11.10295683848715, 8.277102150763163, 8.975921837242282, 7.725103841759282, 8.562794387685765, 13.198085277853124, 8.237399442410503, 10.146553115660053, 11.681947136182876, 11.221990465101156, 9.544146201392742, 10.91422346646619, 12.145236290166213, 11.294036286283122, 10.128979482702729, 11.017549068055974, 11.548565521500992, 8.818673810364665, 9.680943319553245, 10.271726725390067, 9.978502502127249, 9.77812709181201, 9.4015243921037, 11.516725691918655, 12.020311350997861, 10.286737987089522, 13.402085875291707, 10.68013221157384, 7.494061632610547, 9.984631479588431, 9.577683064553446, 8.014580037956405, 9.41993772008844, 12.115471302719724, 10.404521287934076, 9.821217294107974]
+Total time: 1271.7768774032593seconds.cc
+Accuracy for U_6 Amplitude :0.794
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
+Accuracy for Pnoise test with Gnoise Amplitude :1.0
+
