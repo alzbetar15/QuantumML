@@ -11,7 +11,7 @@ import itertools as it
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib
-import sin_data_generator
+import complex_wave_generator
 import Benchmarking
 from tqdm import tqdm
 

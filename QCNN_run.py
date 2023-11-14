@@ -1,6 +1,6 @@
 import Benchmarking
 #import sin_generator
-import sin_data_generator
+import complex_wave_generator
 import Quantum_Data
 import numpy as np
 import datetime
