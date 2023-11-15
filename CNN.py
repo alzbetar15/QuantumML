@@ -28,11 +28,28 @@ def accuracy_test(predictions, labels):
     acc = acc / len(labels)
     return acc
 
+class complex_ReLU(nn.Module):
+    def forward(self, x):
+        return nn.ReLU()(x.real) + 1j * nn.ReLU()(x.imag)
+        
+class complex_MaxPool1d(nn.Module):
+    def forward(self, x):
+        return nn.MaxPool1d(kernel_size = 2)(x.real) + 1j * nn.MaxPool1d(kernel_size = 2)(x.imag)
+        
+class complex_CrossEntropyLoss(nn.Module):
+    def forward(self, inputs, targets):
+
+        real_loss = nn.CrossEntropyLoss(inputs.real, targets.real)
+        imag_loss = nn.CrossEntropyLoss(inputs.imag, targets.imag)
+
+        return (real_loss + imag_loss)/2
+
+
 #counter =0
 steps = 300
 #for binary classification
 n_feature = 2
-batch_size = 20
+batch_size = 10
 
 def Benchmarking_CNN(dataset,filename, input_size, optimizer,smallest):
 
@@ -57,17 +74,14 @@ def Benchmarking_CNN(dataset,filename, input_size, optimizer,smallest):
 
     pickle.dump(currentData, open(currentfile,'wb'))
 
-    class complex_ReLU(nn.Module):
-        def forward(self, x):
-            return nn.ReLU()(x.real) + 1.j * nn.ReLU()(x.imag)
 
     CNN = nn.Sequential(
         nn.Conv1d(in_channels=1, out_channels=n_feature, kernel_size=2, padding=1, dtype=torch.cfloat),
         complex_ReLU(),
-        nn.MaxPool1d(kernel_size=2),
+        complex_MaxPool1d(),
         nn.Conv1d(in_channels=n_feature, out_channels=n_feature, kernel_size=2, padding=1, dtype=torch.cfloat),
         complex_ReLU(),
-        nn.MaxPool1d(kernel_size=2),
+        complex_MaxPool1d(),
         nn.Flatten(),
         nn.Linear(n_feature * final_layer_size, 2, dtype=torch.cfloat)
         )
@@ -75,13 +89,14 @@ def Benchmarking_CNN(dataset,filename, input_size, optimizer,smallest):
     loss_history = []
     for it in range(steps):
         batch_idx = np.random.randint(0, len(X_train), batch_size)
+        #batch_idy = np.random.randint(0, len(Y_train), batch_size)
         X_train_batch = np.array([X_train[i] for i in batch_idx])
         Y_train_batch = np.array([Y_train[i] for i in batch_idx])
 
         X_train_batch_torch = torch.tensor(X_train_batch, dtype=torch.cfloat)
         X_train_batch_torch.resize_(batch_size, 1, input_size)
-        print(X_train_batch_torch)
-        Y_train_batch_torch = torch.tensor(Y_train_batch, dtype=torch.cfloat)
+        Y_train_batch_torch_real = torch.tensor(Y_train_batch.real, dtype=torch.long)
+        Y_train_batch_torch_imag = torch.tensor(Y_train_batch.imag, dtype=torch.long)
 
         criterion = nn.CrossEntropyLoss()
 
@@ -91,8 +106,9 @@ def Benchmarking_CNN(dataset,filename, input_size, optimizer,smallest):
             opt = torch.optim.SGD(CNN.parameters(), lr=0.1, momentum=0.9, nesterov=True)
 
         Y_pred_batch_torch = CNN(X_train_batch_torch)
-
-        loss = criterion(Y_pred_batch_torch, Y_train_batch_torch)
+        real_loss = criterion(Y_pred_batch_torch.real, Y_train_batch_torch_real)
+        imag_loss = criterion(Y_pred_batch_torch.imag, Y_train_batch_torch_imag)
+        loss = (real_loss + imag_loss)/2
         loss_history.append(loss.item())
 
         if it % 10 == 0:
