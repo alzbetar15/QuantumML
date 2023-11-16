@@ -1,6 +1,5 @@
 import Benchmarking
-#import sin_generator
-import complex_wave_generator
+from complex_wave_generator import complex_wave_gen
 import Quantum_Data
 import numpy as np
 import datetime
@@ -43,7 +42,7 @@ if __name__ == "__main__":
     #fname =r'qdata_10000_snr_50.75.txt'
     #fname =r'qdata_10000_0.1.txt'
     #fname =r'Quantum_data\Qdata30.32021.txt'
-    fname =r'Quantum_Data\NoPauil\Qdata20.31011.txt'
+    fname =r'Quantum_data\Qdata30.81030.txt'
     testName ='G30.31011'
     with open(fname) as f:
         lines = f.readlines()

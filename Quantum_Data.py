@@ -11,7 +11,7 @@ import itertools as it
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib
-import complex_wave_generator
+from complex_wave_generator import complex_wave_gen
 import Benchmarking
 from tqdm import tqdm
 
@@ -95,19 +95,10 @@ def depolarisation_channel(circ, qreg, p, wrap=False, inverse=False, label='depo
     probs = [prob_iden] + (num_terms - 1) * [prob_pauli]
 
     paulis = [Pauli("".join(tup)) for tup in it.product(['I', 'X', 'Y', 'Z'], repeat=n)]
-    #print(paulis)
+    
     gates_ind = np.random.choice(num_terms, p=probs, size=1)
-    #print('gi',gates_ind,p)
     gates_ind = gates_ind[0]
-    #gates = paulis[gates_ind]
-    #print(gates_ind)
     gates = paulis[gates_ind]
-    #print(gates)
-    #print(gates,qreg[:])
-    #jj=0
-    #for gate in gates:
-    #    circ.append(gate, [qreg[jj]])
-    #    jj=jj+1
     
     circ.append(gates, qreg[:])
 
@@ -121,7 +112,6 @@ def depolarisation_channel(circ, qreg, p, wrap=False, inverse=False, label='depo
 
     return circ
 
-#data=sin_gen(5, 10000)
 qdata=[]
 
 #main file needed
@@ -132,7 +122,7 @@ def quantum_data(p,freq):
     pauilProb=0
     n = 8
     print('generating data')
-    data=sin_data_generator.sin_gen(p,freq,10000)
+    data=complex_wave_gen(p,freq,100)
     print('generated data')
 
     outputs=[] #add example to array
@@ -170,57 +160,9 @@ def quantum_data(p,freq):
 
     return f_out
 if __name__ == "__main__":
-    #You can essentially ignore all of these, they just keep track of what data I had
-    #or had not generated
-    #to generate data run this file after you put your file
-    #quantum_data(variance,[start frequency,end frequency])
-    quantum_data(0.8,[10,11])
-    quantum_data(0.8,[100,101])
-    quantum_data(0.8,[120,121])
-    #Frequency: 40,120
-    #quantum_data(0.1)
-    #quantum_data(0.3)
-    #quantum_data(0.4)
-    #quantum_data(0.6)
-    #quantum_data(0.7)
-    #quantum_data(0.8)
-    #quantum_data(0.9)
-    #quantum_data(0.5,[10,40])
-    #quantum_data(0.1,[10,40])
-    #quantum_data(0.8,[10,40])
-    #quantum_data(0.5,[40,41])
-    #quantum_data(0.5,[20,21])
-    #quantum_data(0.5,[60,61])
-    #quantum_data(0.31,[10,20])
-    #quantum_data(0.5,[10,20])
-    #quantum_data(0.1,[20,21])
-    #quantum_data(5,[40,120])
-    #remove pauil noise for these ones
-    #quantum_data(0.3,[10,11])
-    #quantum_data(0.5,[10,11])
-    #quantum_data(0.3,[10,20])
-    #quantum_data(0.3,[1,2])
-    
-    #Not done
-    #quantum_data(5,[40,120])
-    #quantum_data(10,[40,120])
-    #quantum_data(10)
-    #quantum_data(0.5,[20,21])
-    #quantum_data(0.3,[20,21])
-    #quantum_data(0.5,[100,101])
-    #quantum_data(0.5,[10,40])
-    #22/08
-    #quantum_data(0.8,[20,21])
-    #quantum_data(0.1,[20,21])
-    #quantum_data(0.3,[40,120])
-    #quantum_data(0.3,[20,80])
-    #quantum_data(0.3,[120,121])
-    #quantum_data(1,[20,21])
-    #quantum_data(5,[20,21])
-    #New frequency    
-    #quantum_data(0.3,[100,101])
-    #quantum_data(0.8,[10,40])
-    #quantum_data(0.8,[40,120])
+  
+    quantum_data(0.8,[10,30])
+
 
 
 #quantum_data(0.4)

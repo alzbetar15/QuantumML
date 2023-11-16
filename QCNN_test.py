@@ -40,10 +40,10 @@ def accuracy2(predictions,labels):
         if pred[0]>pred[1]:
             classification = 0
         else:
-            if ((pred[1]-pred[0])>0.1):
-                classification = 1
-            else:
-                classification=0
+         #   if ((pred[1]-pred[0])>0.1):
+          #      classification = 1
+           # else:
+            classification = 1
 
         if classification == lab:
             acc = acc + 1
@@ -84,9 +84,9 @@ if __name__ == "__main__":
     #oldData = input("Enter file name of data: ")
 
     #Put the model and the corresponding data
-    params =['Models\\2023-08-26H0.31011\modelH0.310115700C0.3630096800446725.pkl','Models\\2023-08-2130.32021\model30.32021280C0.9986088200825529.pkl','Models\\2023-08-24A30.51040\modelA30.51040100C1.4507800346311355.pkl']
-    oldData =['Data\\2023-08-26H0.31011\dataH0.31011.pkl','Data\\2023-08-2130.32021\data30.32021.pkl','Data\\2023-08-24A30.51040\dataA30.51040.pkl']
-    for i in range(3):
+    params =['Models\\2023-11-16G30.31011\modelG30.31011160C2.567215521662093.pkl']
+    oldData =['Data\\2023-11-16G30.31011\dataG30.31011.pkl']
+    for i in range(len(params)):
         print(params[i])
         paramsLoaded =loadParams(params[i])
         testParameters(paramsLoaded,oldData[i])

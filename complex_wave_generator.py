@@ -12,6 +12,8 @@ def complex_wave_gen(snr: float,freq: list,length: int) -> list:
     for i in range(0,length):
         #randomly decides if the data will be signal or noise
         label=np.random.randint(0,2)
+        #label = (number + 1j*number)
+        #print(label)
     
         #0 represents noise
         if label == 0:
@@ -60,4 +62,4 @@ def complex_wave_gen(snr: float,freq: list,length: int) -> list:
 
 
 if __name__ == "__main__":
-    complex_wave_gen(0.5,[10,30],5)
+    complex_wave_gen(0.5,[10,30],10)

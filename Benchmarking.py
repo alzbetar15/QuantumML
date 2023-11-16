@@ -8,7 +8,7 @@ from pennylane.templates.embeddings import AmplitudeEmbedding
 from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 import time
-import sin_generator
+from complex_wave_generator import complex_wave_gen
 import pickle
 import datetime
 import os
@@ -207,7 +207,7 @@ def Benchmarking_new(dataset, Unitaries, U_num_params, filename, circuit, steps,
             #makes predictions of test set with trained parameters
         lsnr=[5,4,3,2,1,0.5,0.25,0.1,0.9,0.8,0.7,0.6,0.5,0.4,0.3,0.2,0.1,0.09,0.08,0.07,0.06,0.05,0.04,0.03,0.02,0.01,0.009,0.008,0.007,0.006,0.005,0.004,0.003,0.002,0.001,0.0009,0.0005,0.0001,0.00009,0.00001]
         for nsnr in lsnr:
-            Xn_train, Xn_test, Yn_train, Yn_test = data_load_and_process1(sin_generator.sin_gen3(nsnr,256))
+            Xn_train, Xn_test, Yn_train, Yn_test = data_load_and_process1(complex_wave_gen(nsnr,256))
             predictions = [QCNN_circuit.QCNN(x, trained_params, U, U_params) for x in Xn_test]
                 
                 #calculate accuray
