@@ -53,21 +53,23 @@ if __name__ == "__main__":
         #print(allstates[2])
         #data handeling of the labels which are at the end of the file
         #try:
+        from pprint import pprint
         labels=allstates[1]
+        pprint(labels)
         labels=labels[:-1]
         labels=labels.strip(']')
         labels=labels.strip('[')
         labels=labels.split(',')
         #print("labels",labels)
         labels=[eval(i) for i in labels]
-        '''except:
-            print("Data labels type 2")
-            labels=allstates[2]
-            #labels=labels[:-1]
-            labels=labels.strip(']')
-            labels=labels.strip('[')
-            #labels=labels.strip(' ')
-            labels=labels.split(',')'''
+        #'''except:
+         #   print("Data labels type 2")
+          #  labels=allstates[2]
+           # #labels=labels[:-1]
+            #labels=labels.strip(']')
+        #    labels=labels.strip('[')
+         #   #labels=labels.strip(' ')
+          #  labels=labels.split(',')'''
             
             
         #print(labels)

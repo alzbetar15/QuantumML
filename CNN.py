@@ -121,7 +121,6 @@ def Benchmarking_CNN(dataset,filename, input_size, optimizer,smallest):
                 smallest = loss.item()   
         opt.zero_grad()
         loss.backward()
-        print(loss.item().type)
         opt.step()
 
         X_test_torch = torch.tensor(X_val, dtype=torch.cfloat)
@@ -154,7 +153,7 @@ if __name__ == "__main__":
     freq = [10,30]
     filename = "CNN_Results/CNN_Result"+str(datetime.datetime.now().date()) + '_' + str(datetime.datetime.now().time()).replace(':', '.')
 
-    dataset = complex_wave_gen(p,freq,100)
+    dataset = complex_wave_gen(p,freq,10000)
     smallest = 20
     print('running')
         

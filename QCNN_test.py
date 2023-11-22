@@ -40,10 +40,10 @@ def accuracy2(predictions,labels):
         if pred[0]>pred[1]:
             classification = 0
         else:
-         #   if ((pred[1]-pred[0])>0.1):
-          #      classification = 1
-           # else:
-            classification = 1
+            if ((pred[1]-pred[0])>0.1):
+                classification = 1
+            else:
+                classification = 1
 
         if classification == lab:
             acc = acc + 1

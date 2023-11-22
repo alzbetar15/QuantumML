@@ -2,3 +2,7 @@ CNN_Data/
 CNN_Models/
 CNN_Results/
 __pycache__/
+Data/
+Models/
+Quantum_data/
+Result/

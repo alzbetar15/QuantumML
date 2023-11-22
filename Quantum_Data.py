@@ -122,7 +122,7 @@ def quantum_data(p,freq):
     pauilProb=0
     n = 8
     print('generating data')
-    data=complex_wave_gen(p,freq,100)
+    data=complex_wave_gen(p,freq,10000)
     print('generated data')
 
     outputs=[] #add example to array
